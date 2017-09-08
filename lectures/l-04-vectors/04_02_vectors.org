@@ -188,7 +188,7 @@ int main()
    }
    std::cout << std::endl;
    
-   for(auto it = numbers.begin(); it< numbers.end(); it++) {
+   for(auto it = std::begin(numbers); it < std::end(numbers); it++) {
       std::cout << *it << " ";
    }
    std::cout << std::endl;
@@ -220,7 +220,7 @@ int main()
    std::vector<int> numbers { 1, 2, 3, 4, 5};
 
    // iteratores are useful to traverse portions of the the vector 
-   for(auto it = numbers.begin(); it< numbers.end(); it++) {
+   for(auto it = std::begin(numbers); it < std::end(numbers); it++) {
       // turn the iterator into a reference
       auto &el  = *it;
       std::cout << el << " ";
@@ -250,7 +250,7 @@ int main()
    std::vector<int> numbers { 1, 2, 3, 4, 5};
 
    // iteratores are useful to traverse portions of the the vector 
-   for(auto it = numbers.begin()+1; it< numbers.end()-1; it++) {
+   for(auto it = std::begin(numbers)+1; it < std::end(numbers)-1; it++) {
       // turn the iterator into a reference
       auto &el  = *it;
       std::cout << el << " ";
@@ -283,7 +283,7 @@ int main()
    std::vector<int> numbers { 1, 2, 3, 4, 5};
 
    // iteratores are useful to traverse portions of the the vector 
-   for(auto it = numbers.rbegin(); it< numbers.rend(); it++) {
+   for(auto it = std::rbegin(numbers); it < std::rend(numbers); it++) {
       // turn the iterator into a reference
       auto &el  = *it;
       std::cout << el << " ";
@@ -313,11 +313,11 @@ int main()
 
    print_vector("Before: ", numbers);
 
-   numbers.erase(numbers.begin()+2);
+   numbers.erase(std::begin(numbers)+2);
 
    print_vector("After erase +2: ", numbers);
 
-   numbers.erase(numbers.begin()+1, numbers.end());
+   numbers.erase(std::begin(numbers)+1, std::end(numbers));
 
    print_vector("After erase to end: ", numbers);
 
@@ -344,7 +344,7 @@ int main()
    std::string name {"Daniel"};
 
    // iteratores are useful to traverse portions of the the vector 
-   for(auto it = name.begin()+1; it< name.end()-1; it++) {
+   for(auto it = std::begin(name)+1; it < std::end(name)-1; it++) {
       // turn the iterator into a reference
       auto &c  = *it;
       std::cout << c << " ";
