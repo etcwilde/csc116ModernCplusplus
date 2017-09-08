@@ -16,7 +16,7 @@ In some of the examples below I use the following function to print the vector.
 You need it to include it instead of in the examples below.
 
 #+BEGIN_SRC C++
-#include "/home/dmg/c++/mycode.hpp
+#include "/home/dmg/c++/mycode.hpp"
 #+END_SRC
 
 #+BEGIN_SRC C++
